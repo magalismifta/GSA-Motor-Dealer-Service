@@ -1,0 +1,544 @@
+:root {
+  --honda-red: #e60012;
+  --honda-dark-red: #cc0010;
+  --dark-grey: #2d3142;
+  --light-bg: #f4f5f7;
+  --border-color: #e2e8f0;
+}
+
+/* 1. Global Box Sizing & Seamless Viewport (Astra Honda Style) */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Menyeleraskan warna paling atas saat ditarik ke bawah (Top Bar #1a1a1a) */
+html {
+  height: 100%;
+  background-color: #1a1a1a; 
+}
+
+/* Menyeleraskan warna paling bawah saat ditarik ke atas (Footer Bottom #141414) */
+body {
+  width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #1a1a1a;
+  color: #333;
+}
+
+/* Menjaga area konten tengah agar tetap terang */
+header,
+.hero, 
+.action-container, 
+#layanan, 
+.location-section {
+  background-color: var(--light-bg);
+}
+
+/* 2. Top Bar Informasi */
+.top-bar {
+  background-color: #1a1a1a;
+  color: #ccc;
+  font-size: 0.75rem;
+  padding: 8px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.top-bar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* 3. Header & Navigation */
+header {
+  background-color: #ffffff;
+  border-bottom: 3px solid var(--honda-red);
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo-badge {
+  background-color: var(--honda-red);
+  color: white;
+  font-weight: 900;
+  font-size: 1.1rem;
+  padding: 3px 8px;
+  font-style: italic;
+  letter-spacing: -0.5px;
+  flex-shrink: 0;
+}
+
+.brand-name {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #111;
+  text-transform: uppercase;
+}
+
+nav {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+nav a {
+  text-decoration: none;
+  color: #444;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+nav a:hover {
+  color: var(--honda-red);
+}
+
+.btn-booking {
+  background-color: var(--honda-red);
+  color: white !important;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+  display: inline-block;
+}
+
+.btn-booking:hover {
+  background-color: var(--honda-dark-red);
+}
+
+/* 4. Hero Section */
+.hero {
+  position: relative;
+  min-height: 280px;
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), 
+              url('images/hero-bengkel.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  color: white;
+  padding: 30px 15px 40px;
+}
+
+.hero-content {
+  max-width: 700px;
+  width: 100%;
+}
+
+.hero-subtitle {
+  background-color: var(--honda-red);
+  display: inline-block;
+  padding: 4px 8px;
+  font-size: 0.7rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.hero h1 {
+  font-size: clamp(1.25rem, 5vw, 2.2rem);
+  font-weight: 800;
+  line-height: 1.25;
+  margin-bottom: 10px;
+  word-wrap: break-word;
+}
+
+.hero p {
+  font-size: clamp(0.8rem, 2.5vw, 0.95rem);
+  color: #ddd;
+  line-height: 1.4;
+}
+
+/* 5. Action Cards (Admin & Mekanik) */
+.action-container {
+  max-width: 1100px;
+  margin: -20px auto 30px;
+  padding: 0 12px;
+  position: relative;
+  z-index: 10;
+  width: 100%;
+}
+
+.action-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 12px;
+}
+
+.action-card {
+  background: white;
+  padding: 16px;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  border-left: 5px solid var(--honda-red);
+}
+
+.action-card h3 {
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+  color: #111;
+}
+
+.action-card p {
+  font-size: 0.8rem;
+  color: #666;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.btn-wa-action {
+  display: block;
+  width: 100%;
+  text-align: center;
+  background-color: #25d366;
+  color: white;
+  text-decoration: none;
+  padding: 10px 8px;
+  font-weight: bold;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  transition: background 0.2s;
+  box-sizing: border-box;
+}
+
+.btn-wa-action:hover {
+  background-color: #1eb954;
+}
+
+/* 6. Section Layanan & Grid */
+.section-title {
+  text-align: center;
+  margin: 30px 0 20px;
+  padding: 0 12px;
+}
+
+.section-title h2 {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #111;
+  text-transform: uppercase;
+}
+
+.section-title p {
+  color: #666;
+  font-size: 0.82rem;
+}
+
+.services-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 12px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 15px;
+  width: 100%;
+}
+
+.service-box {
+  background: white;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-img {
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+  background-color: #e0e0e0;
+}
+
+.service-info {
+  padding: 14px;
+  flex: 1;
+}
+
+.service-info h4 {
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+  color: #111;
+}
+
+.service-info p {
+  font-size: 0.8rem;
+  color: #666;
+  line-height: 1.4;
+}
+
+/* 7. Section Lokasi Map */
+.location-section {
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 0 12px;
+  width: 100%;
+}
+
+.map-box {
+  background: white;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  width: 100%;
+}
+
+.map-iframe {
+  width: 100%;
+  height: 400px;
+  display: block;
+  border: 0;
+}
+
+/* 8. Footer Styling (Astra Honda Layout) */
+.ahm-footer {
+  background-color: #1f1f1f;
+  color: #ffffff;
+  padding-top: 40px;
+  border-top: 4px solid var(--honda-red);
+  margin-top: auto;
+  width: 100%;
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 15px 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.footer-logo {
+  margin-bottom: 15px;
+}
+
+.white-text {
+  color: #fff !important;
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  border-bottom: 1px solid #333;
+  padding: 8px 0;
+}
+
+.footer-links a {
+  color: #aaa;
+  text-decoration: none;
+  font-size: 0.82rem;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: var(--honda-red);
+}
+
+/* Newsletter Card */
+.newsletter-card {
+  background-color: #121212;
+  padding: 18px;
+  border-radius: 6px;
+  border: 1px solid #2a2a2a;
+}
+
+.newsletter-card h3 {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.newsletter-card p {
+  font-size: 0.78rem;
+  color: #999;
+  margin-bottom: 14px;
+  line-height: 1.4;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.newsletter-form input {
+  padding: 8px 10px;
+  border-radius: 4px;
+  border: 1px solid #333;
+  background: #222;
+  color: #fff;
+  font-size: 0.8rem;
+  outline: none;
+}
+
+.newsletter-form input:focus {
+  border-color: var(--honda-red);
+}
+
+.btn-subscribe {
+  background-color: var(--honda-red);
+  color: #fff;
+  border: none;
+  padding: 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-subscribe:hover {
+  background-color: var(--honda-dark-red);
+}
+
+/* Care Badge & Address */
+.care-badge {
+  background-color: var(--honda-red);
+  color: #fff;
+  padding: 12px;
+  border-radius: 6px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.care-title {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.care-phone {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: #fff;
+  text-decoration: none;
+  margin-top: 2px;
+}
+
+.address-box {
+  font-size: 0.78rem;
+  color: #aaa;
+  line-height: 1.5;
+}
+
+.address-box strong {
+  color: #fff;
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* Footer Bottom Bar */
+.footer-bottom {
+  background-color: #1a1a1a;
+  padding: 15px 12px;
+  text-align: center;
+  border-top: 1px solid #222;
+  font-size: 0.75rem;
+  color: #666;
+}
+
+.bottom-links {
+  margin-bottom: 6px;
+}
+
+.bottom-links a {
+  color: #888;
+  text-decoration: none;
+}
+
+.bottom-links a:hover {
+  color: #fff;
+}
+
+/* 9. Media Queries / Responsif Mobile & Tablet */
+@media (max-width: 600px) {
+  .top-bar {
+    justify-content: center;
+    text-align: center;
+  }
+
+  header {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .brand-logo {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .brand-name {
+    font-size: 0.85rem;
+  }
+
+  nav {
+    width: 100%;
+    justify-content: center;
+  }
+
+  nav a {
+    font-size: 0.75rem;
+  }
+
+  .action-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .map-iframe {
+    height: 300px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  header {
+    padding: 12px 20px;
+  }
+
+  .hero {
+    min-height: 320px;
+    padding: 40px 20px;
+  }
+
+  .map-iframe {
+    height: 350px;
+  }
+}

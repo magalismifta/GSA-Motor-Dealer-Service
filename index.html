@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+<!-- Security Headers (CSP & Anti-Clickjacking) -->
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self'; 
+    script-src 'self' 'unsafe-inline'; 
+    style-src 'self' 'unsafe-inline'; 
+    img-src 'self' https: data:; 
+    frame-src https://maps.google.com https://www.google.com;
+  ">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+
+  <title>GSA Motor - Jaringan Bengkel Sepeda Motor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Bar Informasi -->
+  <div class="top-bar">
+    <span>Jam Operasional: Setiap Hari (24 jam)</span>
+    <span>Layanan Darurat: <a href="https://wa.me/6281328520571" target="_blank" rel="noopener noreferrer">081328520571</a></span>
+  </div>
+
+  <!-- Header Navigasi -->
+  <header>
+    <div class="brand-logo">
+      <div class="logo-badge">GSA</div>
+      <div class="brand-name">GSA Motor Dealer & Service</div>
+    </div>
+    <nav>
+      <a href="#beranda">Beranda</a>
+      <a href="#layanan">Layanan</a>
+      <a href="#lokasi">Lokasi</a>
+      <a href="https://wa.me/6281328520571?text=Halo%20GSA%20Motor,%20saya%20ingin%20booking%20service" target="_blank" rel="noopener noreferrer" class="btn-booking">Booking Service</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="beranda">
+    <div class="hero-content">
+      <span class="hero-subtitle">Bengkel Rekomendasi Terpercaya</span>
+      <h1>Layanan Servis & Suku Cadang Resmi Sepeda Motor</h1>
+      <p>Perawatan berkala dengan mekanik berpengalaman, alat analisis modern, dan jaminan suku cadang berkualitas.</p>
+    </div>
+  </section>
+
+  <!-- Card Aksi Cepat Admin & Mekanik -->
+  <div class="action-container">
+    <div class="action-grid">
+      <div class="action-card">
+        <h3>Admin 1: Customer Service & Booking</h3>
+        <p>Pendaftaran antrean servis, informasi jam operasional, estimasi biaya umum, dan layanan darurat.</p>
+        <a href="https://wa.me/6281328520571?text=Halo%20Customer%20Service%20GSA%20Motor,%20saya%20ingin%20konsultasi%20/%20booking%20service" target="_blank" rel="noopener noreferrer" class="btn-wa-action">Chat Customer Service (081328520571)</a>
+      </div>
+      <div class="action-card">
+        <h3>Admin 2: Tim Mekanik & Konsultasi Teknis</h3>
+        <p>Konsultasi kendala mesin berat, diagnosa kelistrikan/injeksi, rekomendasi sparepart, dan pengerjaan khusus.</p>
+        <a href="https://wa.me/6285848626163?text=Halo%20Tim%20Mekanik%20GSA%20Motor,%20saya%20ingin%20konsultasi%20kendala%20teknis" target="_blank" rel="noopener noreferrer" class="btn-wa-action">Chat Tim Mekanik (085848626163)</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section Layanan -->
+  <section id="layanan">
+    <div class="section-title">
+      <h2>Layanan Unggulan</h2>
+      <p>Standar pengerjaan presisi untuk performa optimal sepeda motor Anda</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-box">
+        <div class="service-img" style="background-image: url('https://asset.kompas.com/crops/QRYGg2Pb5O2jfAvp6QajXGsKQ3g=/0x0:4032x2688/1200x800/data/photo/2024/04/26/662b5d0fac150.jpeg');"></div>
+        <div class="service-info">
+          <h4>Servis Berkala & Tune Up</h4>
+          <p>Pemeriksaan sistem injeksi/karburator, pembersihan ruang bakar, dan penyetelan standar pabrikan.</p>
+        </div>
+      </div>
+
+      <div class="service-box">
+        <div class="service-img" style="background-image: url('https://www.ikatanmotorhondajawabarat.com/assets/images/66a910b59f351_ori.jpg');"></div>
+        <div class="service-info">
+          <h4>Perbaikan Mesin & Overhaul</h4>
+          <p>Bongkar mesin profesional untuk mengatasi masalah transmisi, keausan piston, dan kebocoran oli.</p>
+        </div>
+      </div>
+
+      <div class="service-box">
+        <div class="service-img" style="background-image: url('https://cdn-jk01.kabaroto.com/media/2016/10/17/eHsaNUfqMn1476678077.JPG');"></div>
+        <div class="service-info">
+          <h4>Sistem Kelistrikan & Injeksi</h4>
+          <p>Perbaikan starter, kelistrikan lampu, pengisian aki, pergantian kabel bodi, dan diagnosa sensor ECM/ECU motor.</p>
+        </div>
+      </div>
+
+      <div class="service-box">
+        <div class="service-img" style="background-image: url('https://hondaserimpi.com/wp-content/uploads/2025/01/cara-mengganti-oli-motor-696x466-1.jpg');"></div>
+        <div class="service-info">
+          <h4>Ganti Oli & Sparepart</h4>
+          <p>Jaminan ketersediaan oli mesin original dan suku cadang asli untuk daya tahan jangka panjang.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Lokasi Bengkel -->
+  <section class="location-section" id="lokasi">
+    <div class="section-title">
+      <h2>Lokasi Bengkel Kami</h2>
+      <p>Kunjungi GSA Motor di lokasi resmi berikut</p>
+    </div>
+
+    <div class="map-box">
+      <iframe 
+        class="map-iframe"
+        src="https://maps.google.com/maps?q=-6.915643,109.706208&z=15&output=embed" 
+        allowfullscreen="" 
+        loading="lazy"
+        referrerpolicy="no-referrer">
+      </iframe>
+    </div>
+  </section>
+
+  <!-- Footer Astra Honda Style -->
+  <footer class="ahm-footer">
+    <div class="footer-container">
+      
+      <!-- Kolom 1: Logo & Navigasi -->
+      <div class="footer-col">
+        <div class="brand-logo footer-logo">
+          <div class="logo-badge">GSA</div>
+          <div class="brand-name white-text">GSA MOTOR</div>
+        </div>
+        <ul class="footer-links">
+          <li><a href="#beranda">Beranda</a></li>
+          <li><a href="#layanan">Layanan & Service</a></li>
+          <li><a href="#lokasi">Lokasi Bengkel</a></li>
+          <li><a href="https://wa.me/6281328520571" target="_blank" rel="noopener noreferrer">Booking Online</a></li>
+        </ul>
+      </div>
+
+      <!-- Kolom 2: Newsletter Promo -->
+      <div class="footer-col">
+        <div class="newsletter-card">
+          <h3>Newsletter & Promo</h3>
+          <p>Dapatkan update jadwal diskon suku cadang dan promo servis berkala dari GSA Motor.</p>
+          <div class="newsletter-form">
+            <input type="email" placeholder="Masukkan alamat email..." />
+            <button type="button" class="btn-subscribe">Subscribe</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kolom 3: Contact Care & Alamat -->
+      <div class="footer-col">
+        <div class="care-badge">
+          <span class="care-title">GSA MOTOR CARE</span>
+          <a href="https://wa.me/6281328520571" target="_blank" class="care-phone">0813-2852-0571</a>
+        </div>
+        <div class="address-box">
+          <strong>GSA Motor Dealer & Service</strong>
+          <p>Jl. Dr. Wachidin (Dekat Polresta Batang)</p>
+          <p>Batang, Jawa Tengah</p>
+          <p>CS: 0813-2852-0571 | Mekanik: 0858-4862-6163</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Copyright Bar -->
+    <div class="footer-bottom">
+      <div class="bottom-links">
+        <a href="#">Kebijakan Privasi</a> | <a href="#">Syarat & Ketentuan</a>
+      </div>
+      <p>&copy; 2026 GSA Motor Service & Parts. Hak Cipta Dilindungi.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
